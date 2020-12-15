@@ -62,7 +62,7 @@ class SpringCacheTest {
         val bookView = BookView(id = nextUUID(), name = "Kotlin_in_action")
 
         // When
-        shipperViewRepositoryImpl.saveWithCacheableWithoutReturn(bookView)
+        shipperViewRepositoryImpl.saveWithCachePutWithoutReturn(bookView)
 
         // Then
         assertTrue(isCacheExistById(bookView))
